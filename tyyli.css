@@ -1,3 +1,11 @@
+:root {
+    --midnight-green: #0F4C5C;
+    --tan: #C8AB83;
+    --antique-white: #FAEEDB;
+    --sage: #CACAAA;
+    --tyrian-purple: #5F0F40;
+}
+
 * {
     margin: 0;
     padding: 0;
