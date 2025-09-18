@@ -1,14 +1,25 @@
-/* Color palette as variables */
+/* =========================
+   VARIABLES
+   ========================= */
 
 :root {
+  --text-color: #030f12; /* Näistä voisi vaikka pelkästään toisen valita käyttöön?*/
+  --text-color2: #061d23;
   --midnight-green: #0f4c5c;
   --tan: #c8ab83;
   --antique-white: #faeedb;
   --sage: #cacaaa;
   --tyrian-purple: #5f0f40;
+
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --nav-font-size: 1.25rem;
+  --paragraph-size: 1rem;
 }
 
-/* Clean the slate for styling */
+/* =========================
+   RESET STYLES
+   ========================= */
 
 * {
   margin: 0;
@@ -21,7 +32,9 @@ body {
   background-color: var(--antique-white);
 }
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+   ========================= */
 
 .navbar {
   list-style: none;
@@ -40,8 +53,8 @@ body {
 
 .navlink {
   text-decoration: none;
-  font-size: 1.25rem;
-  color: black;
+  font-size: var(--nav-font-size);
+  color: var(--text-color);
 }
 
 .navlink:hover {
@@ -50,7 +63,7 @@ body {
 
 /* Flash color on click */
 .navlink:active {
-  color: var(--tyrian-purple);
+  color: var(--text-color);
 }
 
 /* The active page */
@@ -58,3 +71,15 @@ body {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
+
+/* =========================
+   ETUSIVU
+   ========================= */
+
+/* =========================
+   PALVELUT
+   ========================= */
+
+/* =========================
+   YHTEYSTIEDOT
+   ========================= */
