@@ -1,5 +1,5 @@
 /* =========================
-   VARIABLES
+   MUUTTUJAT
    ========================= */
 
 :root {
@@ -13,12 +13,11 @@
 
   --h1-font-size: 2rem;
   --h2-font-size: 1.5rem;
-  --nav-font-size: 1.25rem;
   --paragraph-size: 1rem;
 }
 
 /* =========================
-   RESET STYLES
+   PERUSASETUKSET
    ========================= */
 
 * {
@@ -33,7 +32,7 @@ body {
 }
 
 /* =========================
-   NAVIGATION
+   NAVIGOINTI
    ========================= */
 
 .navbar {
@@ -53,7 +52,7 @@ body {
 
 .navlink {
   text-decoration: none;
-  font-size: var(--nav-font-size);
+  font-size: 1.5rem;
   color: var(--text-color);
 }
 
@@ -61,12 +60,12 @@ body {
   color: white;
 }
 
-/* Flash color on click */
+/* navigointilinkin klikkaus väläyttää sen väriä */
 .navlink:active {
   color: var(--text-color);
 }
 
-/* The active page */
+/* auki oleva sivu */
 .navlink.active {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
@@ -83,3 +82,10 @@ body {
 /* =========================
    YHTEYSTIEDOT
    ========================= */
+
+.yhteystiedot {
+  height: 100vh; /* selaimessa näkyvän alueen koko korkeus */
+  width: 100vw; /* selaimessa näkyvän alueen koko leveys */
+  background: url("kuvat/taustakuva_koirat.jpg") center/cover no-repeat; /* keskitetty, koko ruudun kattava kuva */
+  overflow: hidden; /* estää turhien scroll barien ilmestymisen */
+}
