@@ -2,56 +2,74 @@
 <!--Kerrotaan, että kieli on suomeksi nettisivulla-->
 <html lang="fi">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Estetään botit ja googlebotit, jottei ne löydä nettisivua-->
-    <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">
-    <title>Eläinhoitola Tassula</title>
-    <!--Haetaan ulkoinen css tyyli tiedosto-->
-    <link rel="stylesheet" href="tyyli.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Estetään botit ja googlebotit, jottei ne löydä nettisivua-->
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <title>Eläinhoitola Tassula</title>
+        <!--Haetaan ulkoinen css tyyli tiedosto-->
+        <link rel="stylesheet" href="tyyli.css">
+    </head>
 
-<header>
-    <!--Tähän tulee navigointi osio-->
-    <nav>
+    <header>
+        <!--Navigointi osio-->
+        <nav>
+            <!--Liitetään Tassula logo navigointi osioon-->
+            <div class="logo-area">
+                <img class="logo" src="./kuvat/Tassula_logo_128.png" alt="Kissa, koira, kani ja marsu yhdessä logossa">
+                <h2 class="h2-style">Tassula</h2>
+            </div>
+            <!--Määritellään CSS:n kautta navigoinnin osion tila-->
+            <ul class="navbar">
+                <li>
+                    <a class="navlink active" href="index.html">Etusivu</a>
+                </li>
+                <li>
+                    <a class="navlink" href="palvelut.html">Palvelut</a>
+                </li>
+                <li>
+                    <a class="navlink" href="yhteystiedot.html">Yhteystiedot</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    </nav>
-    <img class="logo" src="kuvat/Tassula_logo.jpg" alt="Kissa, koira, kani ja marsu yhdessä">
-</header>
+    <!--Sivuston teksti, joka kertoo asiakkaalle minkälaista palvelua tarjotaan-->
+    <body>
+        <h1>Eläinhoitola Tassula</h1>
+        <p>
+         Tervetuloa tutustumaan eläinhoitola Tassulaan! <br>
+         Meillä karvainen ystäväsi saa parasta hoitoa, joko eläinhoitolassamme tai kotonanne.
+        </p>
 
-<body>
-    <h1>Eläinhoitola Tassula</h1>
-    <p>
-        Tervetuloa tutustumaan eläinhoitola Tassulaan! <br>
-        Meillä karvainen ystäväsi saa parasta hoitoa, joko hoitokodissamme tai kotonanne.
-    </p>
+        <br>
 
-    <br>
+        <p>
+            Onko lemmikkinne arka ja ei viihdy hyvin uudessa paikassa? Meidän asiantuntevat <br>
+            työntekijät tulevat mielellään kotiinne hoitamaan lemmikkiänne matkanne ajaksi. <br>
+            Eikö huvita mennä ulkoiluttamaan koiraasi kaatosateessa? Meidän työntekijämme vievät <br>
+            lemmikkinne säässä kuin säässä ulos.
+        </p>
 
-    <p>
-        Onko lemmikkinne arka ja ei viihdy hyvin uudessa paikassa? Meidän asiantuntevat <br>
-        työntekijät tulevat mielellään kotiinne hoitamaan lemmikkiänne matkanne ajaksi. <br>
-        Eikö huvita mennä ulkoiluttamaan koiraasi kaatosateessa? Meidän työntekijämme vievät <br>
-        lemmikkinne säässä kuin säässä ulos.
-    </p>
+        <br>
 
-    <br>
+        <h2>Eläinhoitola</h2>
 
-    <h2>Eläinhoitola</h2>
+        <p>
+            Meidän eläinhoitolassa lemmikkisi saa parasta hoitoa ja pyrimme tulemaan <br> vastaan
+            lemmikkinne tarpeissa. Meiltä löytyy monipuoliset ulkoilu mahdollisuudet eläinhoitolan pihalta sekä lähimetsästä. <br>
+            Meillä on myös tarjota paljon erilaisia aktiviteettejä aktiivisimmille lemmikeille sekä sisällä että ulkona. <br>
+            Meille voit lemmikkisi lempiruoan mukanasi, jos lemmikkisi on nirso uusien ruokien suhteen.
+        </p>
 
-    <p>
-        Meidän eläinhoitolassa lemmikkisi saa parasta hoitoa ja pyrimme tulemaan <br> vastaan
-        lemmikkinne tarpeissa.
-    </p>
+        <br>
 
-    <br> 
+        <!--Sivuston footer, jossa on copyright osio-->
+        <footer>
+            <p>copyright &copy; 2025 Eläinhoitola Tassula, Tia Nousiainen</p>
+        </footer>
 
-    <footer>
-        <p>copyright &copy; 2025, Tia Nousiainen</p>
-    </footer>
-    
-</body>
-
+    </body>
 </html>
