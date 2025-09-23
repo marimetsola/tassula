@@ -69,34 +69,82 @@ nav {
   grid-column: 2; /*sijoitetaan linkit keskimmäiseen sarakkeeseen*/
   list-style: none; /*poistetaan listapallukat linkeistä*/
   display: flex;
-  flex-direction: horizontal; /*linkit vaakariviin*/
+  flex-direction: row; /*linkit vaakariviin*/
 }
 
 .navbar li {
   margin: 2rem 2rem;
 }
 
-.navlink {
+.navlink > a {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--text-color-lighter);
 }
 
-.navlink:hover {
+.navlink > a:hover {
   color: white;
 }
 
 /* auki olevan sivun linkki */
-.navlink.active {
+.navlink.active > a {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   color: var(--midnight-green);
 }
 
 /* navigointilinkin klikkaus väläyttää sen väriä, myös aktiivisen sivun */
-.navlink:active,
-.navlink.active:active {
+.navlink > a:active,
+.navlink > a.active:active {
   color: var(--text-color-lighter);
+}
+
+@media (max-width: 768px) {
+  nav {
+    grid-template-columns: 1fr 1fr; /* osat logolle ja navigoinnille*/
+  }
+
+  .navbar {
+    flex-direction: column; /*linkit pystyriviin*/
+    justify-content: center;
+    padding: 0.25rem 0;
+  }
+
+  .navbar li {
+    background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
+    margin: 0.25rem 0.5rem;
+    border: 2px solid var(--text-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem; /* tila linkkinapin sisällä */
+    text-align: center;
+  }
+
+  .navlink > a {
+    color: var(--antique-white);
+  }
+
+  .navlink.active {
+    background-color: var(
+      --sage
+    ); /* avoimen sivun linkin värit käännetään päittäin*/
+  }
+
+  .navlink.active > a {
+    text-decoration: none;
+    text-underline-offset: 0.5rem;
+    color: var(
+      --midnight-green
+    ); /* avoimen sivun linkin värit käännetään päittäin*/
+  }
+
+  /* poistetaan varuiksi hover väritys vaikka hover ei pitäisi mobiililla onnistua*/
+  .navlink > a:hover {
+    color: var(--antique-white);
+  }
+
+  .navlink.active > a:hover {
+    color: var(--midnight-green);
+  }
 }
 
 /* =========================
