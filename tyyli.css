@@ -73,6 +73,7 @@ nav {
 }
 
 .navlink {
+  color: #fbf4e2; /* hitusen vaaleampi kuin antique-white*/
   font-weight: bolder;
   background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
   margin: 0.25rem 2rem 0.25rem 2rem;
@@ -82,20 +83,19 @@ nav {
   text-align: center;
   text-decoration: none; /* poistetaan underline*/
   font-size: 1.5rem;
-  color: var(--antique-white);
   display: inline-block; /* tällä saadaan esim. mid-width käyttöön */
   min-width: 15rem;
 }
 
 .navlink:hover,
 .navlink.active:hover {
-  color: var(--text-color);
-  background-color: var(--tan);
+  background-color: #1a7f94; /* linkkinapin tausta vaalentuu */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  transition: background-color 0.2s; /* pieni viive taustavärinvaihtoon */
 }
 
 .navlink.active {
   background-color: var(--tyrian-purple);
-  border-width: 4px;
 }
 
 @media (max-width: 768px) {
