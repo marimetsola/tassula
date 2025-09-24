@@ -30,12 +30,12 @@ body {
 
 .h1-style {
   font-family: "Lucida sans", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .h2-style {
   font-family: "Lucida sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* =========================
@@ -72,31 +72,30 @@ nav {
   flex-direction: row; /*linkit vaakariviin*/
 }
 
-.navbar li {
-  margin: 2rem 2rem;
-}
-
-.navlink > a {
-  text-decoration: none;
+.navlink {
+  font-weight: bolder;
+  background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
+  margin: 0.25rem 2rem 0.25rem 2rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  padding: 1.25rem; /* tila linkkinapin sisällä */
+  text-align: center;
+  text-decoration: none; /* poistetaan underline*/
   font-size: 1.5rem;
-  color: var(--text-color-lighter);
+  color: var(--antique-white);
+  display: inline-block; /* tällä saadaan esim. mid-width käyttöön */
+  min-width: 15rem;
 }
 
-.navlink > a:hover {
-  color: white;
+.navlink:hover,
+.navlink.active:hover {
+  color: var(--text-color);
+  background-color: var(--tan);
 }
 
-/* auki olevan sivun linkki */
-.navlink.active > a {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  color: var(--midnight-green);
-}
-
-/* navigointilinkin klikkaus väläyttää sen väriä, myös aktiivisen sivun */
-.navlink > a:active,
-.navlink > a.active:active {
-  color: var(--text-color-lighter);
+.navlink.active {
+  background-color: var(--tyrian-purple);
+  border-width: 4px;
 }
 
 @media (max-width: 768px) {
@@ -106,44 +105,15 @@ nav {
 
   .navbar {
     flex-direction: column; /*linkit pystyriviin*/
-    justify-content: center;
+    gap: 0.25rem;
     padding: 0.25rem 0;
+    align-items: center;
   }
 
-  .navbar li {
-    background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
-    margin: 0.25rem 2rem 0.25rem 0;
-    border: 2px solid var(--text-color);
-    border-radius: 0.5rem;
-    padding: 0.25rem; /* tila linkkinapin sisällä */
-    text-align: center;
-  }
-
-  .navlink > a {
-    color: var(--antique-white);
-  }
-
-  .navlink.active {
-    background-color: var(
-      --sage
-    ); /* avoimen sivun linkin värit käännetään päittäin*/
-  }
-
-  .navlink.active > a {
-    text-decoration: none;
-    text-underline-offset: 0.5rem;
-    color: var(
-      --midnight-green
-    ); /* avoimen sivun linkin värit käännetään päittäin*/
-  }
-
-  /* poistetaan varuiksi hover väritys vaikka hover ei pitäisi mobiililla onnistua*/
-  .navlink > a:hover {
-    color: var(--antique-white);
-  }
-
-  .navlink.active > a:hover {
-    color: var(--midnight-green);
+  .navlink {
+    margin: 0.25rem 1.5rem 0.25rem 0;
+    padding: 0.25rem;
+    min-width: 12rem;
   }
 }
 
