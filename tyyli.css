@@ -30,12 +30,12 @@ body {
 
 .h1-style {
   font-family: "Lucida sans", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .h2-style {
   font-family: "Lucida sans", sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 /* =========================
@@ -53,16 +53,21 @@ nav {
 }
 
 .logo-area {
-  align-items: center; /*keskitetään teksti logon alla*/
+  align-items: center; /*keskitetään logo ja tekstit*/
   justify-self: start; /*logo ja teksti selaimen vasempaan reunaan*/
   margin-left: 2rem;
   display: flex;
-  flex-direction: column; /*logo ja teksti päällekäin*/
+  flex-direction: row; /*logo ja teksti vierekkäin desktopilla*/
 }
 
-.logo-area h2 {
-  margin-bottom: 0.5rem;
+.logo-area-text-container {
+  margin-left: 4rem;
   color: var(--text-color-lighter);
+}
+
+.logo-area-text-container > p {
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
 }
 
 .navbar {
@@ -76,7 +81,7 @@ nav {
   color: #fbf4e2; /* hitusen vaaleampi kuin antique-white*/
   font-weight: bolder;
   background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
-  margin: 0.25rem 2rem 0.25rem 2rem;
+  margin: 0.25rem clamp(2px, 1vw, 2rem) 0.25rem clamp(2px, 1vw, 2rem); /* linkkien väli responsiiviseksi*/
   border: 2px solid var(--text-color);
   border-radius: 0.5rem;
   padding: 1.25rem; /* tila linkkinapin sisällä */
@@ -99,6 +104,24 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .logo-area {
+    margin-bottom: 0.5rem;
+    flex-direction: column; /*logo ja teksti päällekäin*/
+  }
+
+  .logo-area-text-container {
+    margin-left: 0;
+  }
+
+  .logo-area-text-container > h2 {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  .logo-area-text-container > p {
+    display: none; /* jemmataan slogan, koska ei mahdu*/
+  }
+
   nav {
     grid-template-columns: 1fr 1fr; /* osat logolle ja navigoinnille*/
   }
