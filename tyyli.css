@@ -42,7 +42,7 @@ body {
    NAVIGOINTI
    ========================= */
 
-nav {
+header {
   margin: 1rem 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr; /* luodaan skaalautuva osio nav-linkeille*/
@@ -122,7 +122,7 @@ nav {
     display: none; /* jemmataan slogan, koska ei mahdu*/
   }
 
-  nav {
+  header {
     grid-template-columns: 1fr 1fr; /* osat logolle ja navigoinnille*/
   }
 
