@@ -42,7 +42,7 @@ body {
    NAVIGOINTI
    ========================= */
 
-nav {
+header {
   margin: 1rem 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr; /* luodaan skaalautuva osio nav-linkeille*/
@@ -55,19 +55,21 @@ nav {
 .logo-area {
   align-items: center; /*keskitetään logo ja tekstit*/
   justify-self: start; /*logo ja teksti selaimen vasempaan reunaan*/
-  margin-left: 2rem;
+  margin-left: 4vw;
+  margin-right: 3vw;
   display: flex;
   flex-direction: row; /*logo ja teksti vierekkäin desktopilla*/
 }
 
 .logo-area-text-container {
-  margin-left: 4rem;
+  margin-left: 2rem;
   color: var(--text-color-lighter);
 }
 
 .logo-area-text-container > p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-left: 0.25rem;
+  min-width: 13vw;
 }
 
 .navbar {
@@ -81,14 +83,14 @@ nav {
   color: #fbf4e2; /* hitusen vaaleampi kuin antique-white*/
   font-weight: bolder;
   background-color: var(--midnight-green); /*nappeja muistuttavat linkit*/
-  margin: 0.25rem clamp(2px, 1vw, 2rem) 0.25rem clamp(2px, 1vw, 2rem); /* linkkien väli responsiiviseksi*/
+  margin: 0.25rem 1vw 0.25rem 1vw; /* linkkien väli responsiiviseksi*/
   border: 2px solid var(--text-color);
   border-radius: 0.5rem;
-  padding: 1.25rem; /* tila linkkinapin sisällä */
+  padding: 1rem; /* tila linkkinapin sisällä */
   text-align: center;
   text-decoration: none; /* poistetaan underline*/
   font-size: 1.5rem;
-  display: inline-block; /* tällä saadaan esim. mid-width käyttöön */
+  display: inline-block; /* tällä saadaan esim. min-width käyttöön */
   min-width: 15rem;
 }
 
@@ -103,38 +105,53 @@ nav {
   background-color: var(--tyrian-purple);
 }
 
-@media (max-width: 768px) {
+/* Tästä alkaa navigoinnin responsiivisuuden
+   säätäminen. Vaakaresoluution pienetessä
+   logo-aluetta säädetään ja nappeja sekä
+   margineita kavennetaan. */
+
+@media (max-width: 1700px) {
+  .logo-area-text-container > p {
+    display: none; /* jemmataan slogan, koska ei mahdu*/
+  }
+}
+
+@media (max-width: 1280px) {
+  .navlink {
+    font-size: 1rem;
+    min-width: 11rem;
+  }
+}
+
+@media (max-width: 1048px) {
   .logo-area {
     margin-bottom: 0.5rem;
     flex-direction: column; /*logo ja teksti päällekäin*/
   }
 
   .logo-area-text-container {
-    margin-left: 0;
+    margin-left: 0; /* teksti siirtyy logon alle joten keskitetään*/
   }
 
   .logo-area-text-container > h2 {
-    font-size: 2rem;
-    text-decoration: none;
+    font-size: 2rem; /* teksti siirtyy logon alle joten pienennetään*/
   }
+}
 
-  .logo-area-text-container > p {
-    display: none; /* jemmataan slogan, koska ei mahdu*/
-  }
-
-  nav {
+@media (max-width: 768px) {
+  header {
     grid-template-columns: 1fr 1fr; /* osat logolle ja navigoinnille*/
   }
 
   .navbar {
-    flex-direction: column; /*linkit pystyriviin*/
+    flex-direction: column; /*linkit päällekäin*/
     gap: 0.25rem;
     padding: 0.25rem 0;
     align-items: center;
   }
 
   .navlink {
-    margin: 0.25rem 1.5rem 0.25rem 0;
+    margin: 0.25rem 4vw 0.25rem 0;
     padding: 0.25rem;
     min-width: 12rem;
   }
