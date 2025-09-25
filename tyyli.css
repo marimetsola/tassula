@@ -175,3 +175,39 @@ header {
   background: url("kuvat/taustakuva_koirat.jpg") center/cover no-repeat; /* keskitetty, koko ruudun kattava kuva */
   overflow: hidden; /* estää turhien scroll barien ilmestymisen */
 }
+
+.yhteystiedot-container {
+  margin: 5vh 5vw;
+  /* background-color: var(--antique-white); */
+  background-color: rgba(
+    250,
+    238,
+    219,
+    0.9
+  ); /* antique-white, mutta hieman läpinäkyvä*/
+  border-radius: 0.125rem;
+  padding: 1rem;
+}
+
+.yhteystiedot-container > h1 {
+  text-align: center;
+}
+
+.yhteystiedot-container > h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.yhteystiedot-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  height: 40vh;
+}
+
+.yhteystiedot-map-container > iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.125rem;
+  border: 2px solid var(--midnight-green);
+}
