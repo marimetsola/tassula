@@ -13,5 +13,5 @@ The following images are created with the help of Copilot (Microsoft):
 
 ## Supported resolutions
 
-- Desktop 1920 x 950
-- Mobile 411px x 780
+- Desktop 1920 x 950 px
+- Mobile 411 x 780 px

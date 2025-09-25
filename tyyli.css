@@ -178,7 +178,6 @@ header {
 
 .yhteystiedot-container {
   margin: 5vh 5vw;
-  /* background-color: var(--antique-white); */
   background-color: rgba(
     250,
     238,
@@ -201,13 +200,36 @@ header {
 .yhteystiedot-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5vw;
-  height: 40vh;
+  gap: 10vw;
+  height: 50vh;
 }
 
-.yhteystiedot-map-container > iframe {
+.yhteystiedot-contact-info > h2 {
+  margin-bottom: 1rem;
+}
+.yhteystiedot-contact-info > p {
+  line-height: 1.5;
+}
+
+.yhteystiedot-contact-map > iframe {
   width: 100%;
   height: 100%;
   border-radius: 0.125rem;
   border: 2px solid var(--midnight-green);
+}
+
+@media (max-width: 768px) {
+  .yhteystiedot-container {
+    margin: 3vh 5vw;
+  }
+
+  .yhteystiedot-container > h1 {
+    font-size: 2rem;
+  }
+
+  .yhteystiedot-details {
+    grid-template-columns: 1fr; /* muutetaan grid pystysuuntaiseksi */
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
 }
