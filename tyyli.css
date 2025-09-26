@@ -175,13 +175,15 @@ header {
   text-align: center;
 }
 
-#h2-etusivu {
+.h2-etusivu {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: "Lucida sans", sans-serif;
+  font-size: 3rem;
 }
 
-#paragraph-etusivu {
+.paragraph-etusivu {
   text-align: center;
 }
 
