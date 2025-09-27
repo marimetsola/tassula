@@ -170,9 +170,24 @@ header {
 .etusivu {
   height: 100vh;
   width: 100vw;
+  background: url("kuvat/Kissa_ja_koira.png") center/cover no-repeat;
+  width: auto;
+  height: auto;
 }
 #h1-etusivu {
   text-align: center;
+}
+
+.tausta{
+  margin: 5vh 5vw;
+  background-color: rgba(
+    250,
+    238,
+    219,
+    0.5
+  ); /* antique-white, mutta hieman läpinäkyvä*/
+  border-radius: 0.125rem;
+  padding: 1rem;
 }
 
 .h2-etusivu {
@@ -197,6 +212,14 @@ footer {
 /* =========================
    PALVELUT
    ========================= */
+  
+  #kuva {
+  max-width: 200px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+
+}
 
 /* =========================
    YHTEYSTIEDOT
