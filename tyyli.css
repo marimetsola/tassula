@@ -62,19 +62,18 @@ header {
   justify-self: start; /*logo ja teksti selaimen vasempaan reunaan*/
   margin-left: 4vw;
   margin-right: 3vw;
+  margin-bottom: 0.5rem;
   display: flex;
-  flex-direction: row; /*logo ja teksti vierekkäin desktopilla*/
+  flex-direction: column;
+}
+
+.logo-area-text-container > h2 {
+  font-size: 2rem; /* teksti siirtyy logon alle joten pienennetään*/
 }
 
 .logo-area-text-container {
-  margin-left: 2rem;
+  margin-left: 0rem;
   color: var(--text-color-lighter);
-}
-
-.logo-area-text-container > p {
-  font-size: 1rem;
-  margin-left: 0.25rem;
-  min-width: 13vw;
 }
 
 .navbar {
@@ -115,31 +114,10 @@ header {
    logo-aluetta säädetään ja nappeja sekä
    margineita kavennetaan. */
 
-@media (max-width: 1700px) {
-  .logo-area-text-container > p {
-    display: none; /* jemmataan slogan, koska ei mahdu*/
-  }
-}
-
 @media (max-width: 1280px) {
   .navlink {
     font-size: 1rem;
     min-width: 11rem;
-  }
-}
-
-@media (max-width: 1048px) {
-  .logo-area {
-    margin-bottom: 0.5rem;
-    flex-direction: column; /*logo ja teksti päällekäin*/
-  }
-
-  .logo-area-text-container {
-    margin-left: 0; /* teksti siirtyy logon alle joten keskitetään*/
-  }
-
-  .logo-area-text-container > h2 {
-    font-size: 2rem; /* teksti siirtyy logon alle joten pienennetään*/
   }
 }
 
