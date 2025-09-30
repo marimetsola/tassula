@@ -144,7 +144,7 @@ header {
   border: 2px solid black;
   background-color: #c8ab83;
   font-family: "Lucida sans", sans-serif;
-  color:#030f12;
+  color: #030f12;
   text-align: center;
   cursor: pointer;
   display: inline-block;
@@ -216,10 +216,10 @@ footer {
    ========================= */
 
 .yhteystiedot {
-  height: 100vh; /* selaimessa näkyvän alueen koko korkeus */
-  width: 100vw; /* selaimessa näkyvän alueen koko leveys */
   background: url("kuvat/taustakuva_koirat.jpg") center/cover no-repeat; /* keskitetty, koko ruudun kattava kuva */
-  overflow: hidden; /* estää turhien scroll barien ilmestymisen */
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
 }
 
 .yhteystiedot-container {
@@ -247,7 +247,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10vw;
-  height: 50vh;
 }
 
 .yhteystiedot-contact-info > h2 {
@@ -255,6 +254,11 @@ footer {
 }
 .yhteystiedot-contact-info > p {
   line-height: 1.5;
+}
+
+.yhteystiedot-contact-map {
+  max-height: 100%;
+  min-height: 40dvh;
 }
 
 .yhteystiedot-contact-map > iframe {
