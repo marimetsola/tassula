@@ -162,7 +162,7 @@ header {
 .etusivu {
   height: 100vh;
   width: 100vw;
-  background: url("kuvat/Kissa_ja_koira.png") center/cover no-repeat;
+  background: url("kuvat/Kissa_ja_koira.jpg") center/cover no-repeat;
   width: auto;
   height: auto;
 }
@@ -198,6 +198,7 @@ header {
 mukana, bodyssa muutama muutos tässä auttamassa */
 footer {
   margin-top: auto;
+  text-align: center;
 }
 
 /* =========================
