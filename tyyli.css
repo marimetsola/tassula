@@ -163,6 +163,23 @@ header {
 }
 
 /* =========================
+   FOOTER
+   ========================= */
+
+/*Footer pysyy nettisivun alareunassa eikä tule sivun
+mukana, bodyssa muutama muutos tässä auttamassa */
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: var(--sage);
+  border-top: 2px solid var(--midnight-green);
+}
+
+footer p {
+  padding: 1rem;
+}
+
+/* =========================
    ETUSIVU
    ========================= */
 
@@ -201,13 +218,6 @@ header {
   text-align: center;
 }
 
-/*Footer pysyy nettisivun alareunassa eikä tule sivun
-mukana, bodyssa muutama muutos tässä auttamassa */
-footer {
-  margin-top: auto;
-  text-align: center;
-}
-
 /* =========================
    PALVELUT
    ========================= */
@@ -230,8 +240,14 @@ footer {
   overflow-x: hidden;
 }
 
+.yhteystiedot-main {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
 .yhteystiedot-container {
-  margin: 5vh 5vw;
+  margin: auto 5vw auto 5vw;
   background-color: rgba(
     250,
     238,
@@ -245,7 +261,6 @@ footer {
 /*Yhteystiedot sivun titlejen muotoilu*/
 .yhteystiedot-container > h1 {
   text-align: center;
-  margin-top: 1rem;
 }
 
 .yhteystiedot-container > h2 {
