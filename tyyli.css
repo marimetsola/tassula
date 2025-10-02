@@ -251,13 +251,13 @@ footer {
 .yhteystiedot-container > h2 {
   font-size: 2rem;
   text-align: center;
-  margin: 0.25rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
 }
 
 .yhteystiedot-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10vw;
+  gap: 5vw;
 }
 
 .yhteystiedot-details h3 {
@@ -275,6 +275,13 @@ footer {
   font-size: 1.25rem;
 }
 
+.yhteystiedot-contact-info a {
+  white-space: nowrap; /* jotta puhelinnumero ei katkea keskeltä tietyillä ruudunleveyksillä*/
+}
+
+.opening-hours {
+  margin-bottom: 2rem;
+}
 .opening-hours th,
 .opening-hours td {
   /* border: 1px solid #333;  */
@@ -284,16 +291,37 @@ footer {
 }
 
 .yhteystiedot-contact-map {
-  height: 20vw; /*neliön muotoinen kartta*/
-  width: 20vw;
+  height: 100%;
+  width: 80%;
   justify-self: center;
 }
 
 .yhteystiedot-contact-map > iframe {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   border-radius: 0.125rem;
   border: 2px solid var(--midnight-green);
+}
+
+@media (max-width: 1500px) {
+  .yhteystiedot-contact-map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .yhteystiedot-details {
+    grid-template-columns: 1fr; /* muutetaan grid pystysuuntaiseksi */
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+
+  .yhteystiedot-contact-map {
+    height: 100%; /*neliön muotoinen kartta*/
+    width: 100%;
+    height: 30vh;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -302,12 +330,19 @@ footer {
   }
 
   .yhteystiedot-container > h1 {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
-  .yhteystiedot-details {
-    grid-template-columns: 1fr; /* muutetaan grid pystysuuntaiseksi */
-    grid-template-rows: auto auto;
-    gap: 0;
+  .yhteystiedot-container > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .yhteystiedot-details h3 {
+    display: none;
+  }
+
+  .yhteystiedot-contact-info > p {
+    margin-bottom: 1rem;
   }
 }
