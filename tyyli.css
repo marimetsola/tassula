@@ -255,7 +255,7 @@ footer p {
     0.9
   ); /* antique-white, mutta hieman läpinäkyvä*/
   border-radius: 0.125rem;
-  padding: 2rem; /* tilaa laatikon reunojen ja sisällön väliin */
+  padding: 1rem; /* tilaa laatikon reunojen ja sisällön väliin */
 }
 
 /*Yhteystiedot sivun titlejen muotoilu*/
