@@ -224,9 +224,11 @@ footer p {
 
 .palvelut-main {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin: auto 0;
   justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .palvelut-tekstitausta {
@@ -248,18 +250,19 @@ footer p {
   line-height: 2.2;
 }
 
-/* lemmikki-asiakkaiden kuvat ja kommentit  */
-.palvelut-kuvat {
+.palvelut-kuvat { /* lemmikki-asiakkaiden kuvat ja kommentit  */
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
 }
 
-@media (max-width: 700px) { /* responsiivisuus */
+@media (max-width: 768px) { /* mobiili responsiivisuus */
   .palvelut-kuvat {
     flex-direction: column;
     gap: 0.1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -274,11 +277,13 @@ footer p {
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) { /* responsiivisuus */
+@media (max-width: 768px) { /* mobiili responsiivisuus */
   .palvelut-kuvat img {
     flex-direction: column;
     margin-top: 2rem;
     margin-bottom: 0rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -289,8 +294,7 @@ footer p {
   margin-bottom: 4rem;
 }
 
-/* hinnaston layout  */
-.hinnasto-grid {
+.hinnasto-grid { /* hinnaston layout  */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -308,16 +312,18 @@ footer p {
 }
 
 /* työntekijöiden esittely  */
-.tyontekijat-esittelyt {
+
+.tyontekijat-esittelyt { 
+  margin: 0 auto 4rem auto;
   display: flex;
   flex-direction: row;
-  max-width: 50rem;
   justify-content: center;
+  max-width: 50rem;
   gap: 1rem;
   margin-bottom: 4rem;
 }
 
-@media (max-width: 768px) { /* responsiivisuus */
+@media (max-width: 768px) { /* mobiili - responsiivisuus */
   .tyontekijat-esittelyt {
     flex-direction: column;
     justify-content: center;
