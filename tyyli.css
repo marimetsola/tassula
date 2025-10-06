@@ -231,7 +231,7 @@ footer p {
 
 .palvelut-tekstitausta {
   background-color: #F6E2BE99;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -242,11 +242,10 @@ footer p {
 
 .esittely-laatikko {
   background-color: #FAEEDB;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  line-height: 2.5;
-  margin-bottom: 1rem;
+  line-height: 2.2;
 }
 
 .palvelut-kuvat {
@@ -257,11 +256,11 @@ footer p {
 }
 
 .palvelut-kuvat img {
-  display: block;
+  display: flex;
   margin: 5rem auto 1rem;
   width: 100%;
   max-width: 10rem;
-  min-width: 7rem;
+  min-width: 5rem;
   object-fit: cover;
   border-radius: 50%;
   margin-top: 1.5rem;
@@ -277,7 +276,7 @@ footer p {
 
 .hinnasto-grid {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 5rem; 
@@ -298,14 +297,14 @@ footer p {
   max-width: 50rem;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 5rem; 
+  margin-bottom: 4rem; 
 }
 
 .tyontekija-tekstit {
   background-color:#F6E2BE99;
   padding: 1rem;
   border-radius: 0.5rem;
-  text-align: center;
+  text-align: left;
   line-height: 2.0;
 }
 
