@@ -230,7 +230,7 @@ footer p {
 }
 
 .palvelut-tekstitausta {
-  background-color: #F6E2BE99;
+  background-color: #f6e2be99;
   padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
@@ -241,7 +241,7 @@ footer p {
 }
 
 .esittely-laatikko {
-  background-color: #FAEEDB;
+  background-color: #faeedb;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -279,16 +279,16 @@ footer p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 5rem; 
+  margin-bottom: 5rem;
 }
 
 .hinta-kortti {
-  background-color: #CACAAA;
+  background-color: #cacaaa;
   width: 15rem;
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
-  line-height: 2.0;
+  line-height: 2;
 }
 
 .tyontekijat-esittelyt {
@@ -297,15 +297,15 @@ footer p {
   max-width: 50rem;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 4rem; 
+  margin-bottom: 4rem;
 }
 
 .tyontekija-tekstit {
-  background-color:#F6E2BE99;
+  background-color: #f6e2be99;
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: left;
-  line-height: 2.0;
+  line-height: 2;
 }
 
 .tyontekija {
@@ -317,13 +317,12 @@ footer p {
 .tyontekija img {
   width: 100%;
   max-width: 10rem;
-  min-width: 8rem; 
+  min-width: 8rem;
   height: auto;
   object-fit: cover;
   border-radius: 0.5rem;
   margin-bottom: 0.7rem;
 }
-
 
 /* =========================
    YHTEYSTIEDOT
@@ -333,13 +332,11 @@ footer p {
   background: url("kuvat/taustakuva_koirat.jpg") center/cover no-repeat; /* keskitetty, koko ruudun kattava kuva */
   width: auto;
   height: auto;
-  overflow-x: hidden;
+  overflow-x: hidden; /* varuiksi estämään vaakascrolli */
 }
 
 .yhteystiedot-main {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
+  margin: auto 0; /* keskitetään pystysuunnassa */
 }
 
 .yhteystiedot-container {
@@ -365,6 +362,7 @@ footer p {
   margin: 1rem 0 4rem 0;
 }
 
+/* omat sarakkeensa yhteystiedoilla ja kartalle */
 .yhteystiedot-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -393,14 +391,15 @@ footer p {
 .opening-hours {
   margin-bottom: 2rem;
 }
+
 .opening-hours th,
 .opening-hours td {
-  /* border: 1px solid #333;  */
   padding: 0.25rem 0.75rem; /* väliä teksteihin */
-  text-align: left; /* tasaa vasemmalle */
+  text-align: left;
   font-size: 1.5rem;
 }
 
+/* kartta säädetään sopivan kokoiseksi */
 .yhteystiedot-contact-map {
   height: 100%;
   width: 80%;
@@ -422,15 +421,13 @@ footer p {
 
 @media (max-width: 1040px) {
   .yhteystiedot-details {
-    grid-template-columns: 1fr; /* muutetaan grid pystysuuntaiseksi */
+    grid-template-columns: 1fr; /* muutetaan grid pystysuuntaiseksi, yhteystiedot ja kartta päällekkäin */
     grid-template-rows: auto auto;
     gap: 0;
   }
 
   .yhteystiedot-contact-map {
-    height: 100%; /*neliön muotoinen kartta*/
-    width: 100%;
-    height: 30vh;
+    height: 30vh; /* kartalle lisää korkeutta, kun ruudunleveys kapenee*/
     justify-self: center;
   }
 }
@@ -440,6 +437,7 @@ footer p {
     margin: 3vh 5vw;
   }
 
+  /* otsikot hieman pienemmiksi, että mahtuvat paremmin mobiilinäkymään */
   .yhteystiedot-container > h1 {
     font-size: 2.75rem;
   }
@@ -450,7 +448,7 @@ footer p {
   }
 
   .yhteystiedot-details h3 {
-    display: none;
+    display: none; /* piilotetaan pikkuotsikko ettei mobiilinäkymä ruuhkaudu */
   }
 
   .yhteystiedot-contact-info > p {
